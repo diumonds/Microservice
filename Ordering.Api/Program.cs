@@ -1,5 +1,7 @@
-var builder = WebApplication.CreateBuilder(args);
+using Ordering.Application.Mappings;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 // Add services to the container.
 
 builder.Services.AddControllers();
