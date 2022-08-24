@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Ordering.Application.Features.Commands.CheckOutOrder;
+using Ordering.Application.Features.Commands.UpdateOrder;
 using Ordering.Application.Features.Queries;
 using Ordering.Domain.Entities;
 using System;
