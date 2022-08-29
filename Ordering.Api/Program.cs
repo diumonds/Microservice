@@ -24,9 +24,11 @@ builder.Services.AddDbContext<OrderContext>(options =>
 
 builder.Services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-var app = builder.Build();
 builder.Services.Configure<EmailSettings>(c => builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddTransient<IEmailService, EmailService>();
+var app = builder.Build();
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
